@@ -14,25 +14,30 @@ let divisionButton = document.getElementById('division');
 additionButton.addEventListener('click', function() {
     let num1 = document.getElementById('number-one').value;
     let num2 = document.getElementById('number-two').value;
-    console.log(parseInt(num1) + parseInt(num2))
-});
+    document.getElementById('output').innerHTML = parseInt(num1) + parseInt(num2)
+}); 
+
 
 subtractionButton.addEventListener('click', function() {
     let num1 = document.getElementById('number-one').value;
     let num2 = document.getElementById('number-two').value;
-    console.log(parseInt(num1) - parseInt(num2))
+    document.getElementById('output').innerHTML = parseInt(num1) - parseInt(num2)
 });
 
 multiplicationButton.addEventListener('click', function() {
     let num1 = document.getElementById('number-one').value;
     let num2 = document.getElementById('number-two').value;
-    console.log(parseInt(num1) * parseInt(num2))
+    document.getElementById('output').innerHTML = parseInt(num1) * parseInt(num2)
 });
 
 divisionButton.addEventListener('click', function() {
     let num1 = document.getElementById('number-one').value;
     let num2 = document.getElementById('number-two').value;
-    console.log(parseInt(num1) / parseInt(num2))
+    if (num2 === '0') {
+        alert("Can't divide by 0.  Choose another number.")
+    } else {
+    document.getElementById('output').innerHTML = parseInt(num1) / parseInt(num2)
+    }
 });
 
 
